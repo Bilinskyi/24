@@ -7,22 +7,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
    
 
-  $popup = $_POST["popup"];
-  $diagn = $_POST["diagn"];
-  $prod = $_POST["prod"];
   
-  $problem = $_POST["problem"];
-  $model = $_POST["model"];
-  $mark = $_POST["mark"];
-  $sel = $_POST["sel"];
+  
   $phone = $_POST["phone"];
   $email = $_POST["email"];
+  $question = $_POST["question"];
+  $tarif = $_POST["tarif"];
+  $add = $_POST["add"];
 
-  // $utm_source = $_POST["utm_source"];
-  // $utm_medium = $_POST["utm_medium"];
-  // $utm_campaign = $_POST["utm_campaign"];
-  // $utm_term = $_POST["utm_term"];
-  // $utm_content = $_POST["utm_content"];
+
 
 
 
@@ -31,16 +24,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
   $to  = "1unitedcrew@gmail.com";  
 
-  if (isset($problem)) {
-    $message = "Выбор: $problem<br>Модель: $model<br>Марка: $mark<br>Год: $sel<br>Телефон: $phone";
-  } else if (isset($popup)) {
-    $message = "Телефон: $phone";
-  } else if (isset($email)) {
-    $message = "Email: $email";
-  } else if (isset($prod)) {
-    $message = "Телефон: $phone<br>$prod";
+  if (isset($question)) {
+    $message = "Телефон: $phone<br>Email: $email<br>Вопрос: $question";
+  } else if (isset($tarif)) {
+    $message = "Телефон: $phone<br>Тариф: $tarif";
   } else {
-    $message = "Телефон: $phone";
+    $message = "Телефон: $phone<br>$add";
   }
 
   $subject = "Заявка с сайта"; 

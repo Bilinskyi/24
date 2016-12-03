@@ -1,12 +1,13 @@
-::-webkit-input-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
-::-moz-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
-:-moz-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
-:-ms-input-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
+::-webkit-input-placeholder {font-family: $pt;font-weight: 400;color: #9b9b9b;font-size: 20px;}
+::-moz-placeholder {font-family: $pt;font-weight: 400;color: #9b9b9b;font-size: 20px;}
+:-moz-placeholder {font-family: $pt;font-weight: 400;color: #9b9b9b;font-size: 20px;}
+:-ms-input-placeholder {font-family: $pt;font-weight: 400;color: #9b9b9b;font-size: 20px;}
 
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
+.inline-block {display: inline-block;}
 .inline-center{text-align: center;}
 .left-t{text-align: left;}
 .right-t{text-align: right;}
@@ -17,13 +18,36 @@
 .wrapper:before, .wrapper:after{content: ''; display: table;}
 .wrapper:after {clear: both;}
 .flow-hidden {overflow: hidden}
+.cll {clear: left;}
+
+.hide-b {
+  display: none;
+}
+
+.title-lg {
+  color: #404042;
+font-size: 56px;
+line-height: 60px;
+}
+
+.title-2 {
+  color: #404042;
+font-size: 65px;
+line-height: 65px;
+}
+
 body {
   position: relative; 
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-weight: 400;
+  min-width: 1644px;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-weight: normal;
+}
 ul {
   margin: 0;
   padding: 0;

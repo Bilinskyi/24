@@ -68,7 +68,7 @@ gulp.task('scripts', function() {
 		])
 	.pipe(concat('libs.min.js')) 
 	.pipe(jsmin()) 
-	.pipe(gulp.dest('dist/js')); 
+	.pipe(gulp.dest('app/js')); 
 });
 
 

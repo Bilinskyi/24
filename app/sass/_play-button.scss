@@ -1,0 +1,44 @@
+.video-play {
+  width: 94px;
+  height: 94px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  background: url(../svg/play.svg) center center no-repeat rgba(255,255,255, 1);
+  background-size: 21px 28px;
+  transition: all .15s linear;
+  &:hover {
+    cursor: pointer !important;
+    // border-color: transparent;
+    background: url(../svg/play.svg) center no-repeat !important;
+    background-size: 21px 28px;
+  }
+  &:before {
+    content: " ";
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0; 
+    left: -41px;
+    position: absolute;
+    width: 176px;
+    height: 176px;
+    border: 1px solid rgba(255,255,255,.32);
+    border-radius: 50%;
+    animation: circle 1.7s linear infinite;
+  }
+  &:after {
+    content: " ";
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 160px;
+    left: -33px;
+    border: 1px solid rgba(255,255,255,.32);
+    border-radius: 50%;
+    animation: circle 2s linear .5s infinite;
+  }
+}

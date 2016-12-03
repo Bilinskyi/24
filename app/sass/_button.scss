@@ -1,0 +1,24 @@
+.button {
+  height: 61px;
+  background-color: #8cc63f;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #737f64, inset 0 -3px 0 #73a62e;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  line-height: 61px;
+  color: white;
+  font-size: 20px;
+  transition: .15s;
+  &.padding-slide {
+    padding: 0 43px;
+  }
+  &:hover {
+    background-color: #7aaf35;
+box-shadow: 0 1px 0 #737f64, inset 0 -1px 0 #73a62e;
+  }
+  &:active {
+    background-color: #69982d;
+box-shadow: 0 1px 0 #737f64, inset 0 3px 0 #73a62e;
+  }
+}
