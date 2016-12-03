@@ -1,14 +1,56 @@
+// 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('video-placeholder', {
+          height: '550',
+          width: '900',
+          videoId: 'nIv2elxcvvQ',
+          events: {
+            // 'onReady': onPlayerReady
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      
+      // function stopVideo() {
+      //   player.stopVideo();
+      // }
+
+
+
 
 $(document).ready(function(){
 
-  $('.random-js').on('click', function(e) {
+ //  $('.random-js').on('click', function(e) {
+ //   e.preventDefault(); 
+ //   var rand = $('.main-info').length-1;
+ //   var j = Math.floor(Math.random() * rand) + 0;
+ //   $(this).closest('.row').find('.main-photo').removeClass('active').eq(j).addClass('active');
+ //   $('.wrapp-ph').append($('.main-photo.active'));
+ //   $(this).closest('.dsc-block').find('.main-info').removeClass('active').eq(j).addClass('active'); 
+ //   $('.dsc-tab-right').append($('.main-info.active'));
+ // });
+
+
+   $('.random-js').on('click', function(e) {
    e.preventDefault(); 
-   var rand = $('.main-info').length-1;
-   var j = Math.floor(Math.random() * rand) + 0;
-   $(this).closest('.row').find('.main-photo').removeClass('active').eq(j).addClass('active');
-   $('.wrapp-ph').append($('.main-photo.active'));
-   $(this).closest('.dsc-block').find('.main-info').removeClass('active').eq(j).addClass('active'); 
-   $('.dsc-tab-right').append($('.main-info.active'));
+   var th = $(this).closest('.dsc-block').find('.main-info.active').prev().index();
+   console.log(th);
+   $(this).closest('.row').find('.main-photo').removeClass('active').eq(th).addClass('active');
+   $(this).closest('.dsc-block').find('.main-info').removeClass('active').eq(th).addClass('active'); 
  });
 
 
@@ -45,11 +87,23 @@ $(document).ready(function(){
   });
 
 
+
+// function Border
+function get_border($opt, $opt2) {
+  var hhh = $($opt).css('height').slice(0,-2) /2;
+  $('<style>'+$opt2+':after{border: '+hhh+'px solid transparent;}</style>').appendTo( "head" );
+}
+
+get_border('.tabs-caption li', '.tabs-caption li');
+
   $(function() {
     $('.tabs-caption').on('click', 'li:not(.active)', function() {
+
+get_border($(this), '.tabs-caption li');
+
       $(this)
       .addClass('active').siblings().removeClass('active')
-      .closest('.tabs-last').find('.tabs-content').removeClass('active').css({opacity: '0',display: 'none'}).eq($(this).index()).addClass('active').css('display', 'block').animate({opacity: '1'}, 300);
+      .closest('.tabs-last').find('.tabs-content').removeClass('active').css({opacity: '0',display: 'none'}).eq($(this).index()).addClass('active').css('display', 'block').animate({opacity: '1'}, 200);
 
     })
   });
@@ -118,21 +172,11 @@ $(window).load(function() {
 
   $('.section-9 > div, .m-h-1, .m-h-2').matchHeight(); 
 
+
 });
 
 
-var player;
 
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('video-placeholder', {
-    width: 900,
-    height: 550,
-    videoId: 'TpN7wHFV9nc',
-    playerVars: {
-      color: 'white'
-    }
-  });
-}
 
 
 ymaps.ready(init);
