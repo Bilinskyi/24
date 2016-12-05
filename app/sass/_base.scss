@@ -3,6 +3,13 @@
 :-moz-placeholder {font-family: $pt;font-weight: 400;color: #9b9b9b;font-size: 20px;}
 :-ms-input-placeholder {font-family: $pt;font-weight: 400;color: #9b9b9b;font-size: 20px;}
 
+@media #{$bp-blarge} {
+      ::-webkit-input-placeholder {font-size: 16px;}
+::-moz-placeholder {font-size: 16px;}
+:-moz-placeholder {font-size: 16px;}
+:-ms-input-placeholder {font-size: 16px;}
+}
+
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -28,6 +35,10 @@
   color: #404042;
 font-size: 56px;
 line-height: 60px;
+@media #{$bp-blarge} {
+      font-size: 36px;
+line-height: 39px;
+}
 }
 
 .title-2 {
@@ -41,7 +52,6 @@ body {
   color: #fff;
   font-family: 'PT Sans', sans-serif;
   font-weight: 400;
-  min-width: 1644px;
 }
 
 h1,h2,h3,h4,h5,h6 {

@@ -14,6 +14,11 @@ header {
 	background: url('../img/header.jpg') center top no-repeat;
 	padding-bottom: 150px;
 	background-size: cover;
+	.button {
+		@media #{$bp-blarge} {
+			font-size: 14px;
+		}
+	}
 	&+.section-1 {
 		&>.container {
 			margin-top: -80px;
@@ -27,6 +32,11 @@ header {
 		height: 195px;
 		background-size: 237px 195px;
 		vertical-align: middle;
+		@media #{$bp-blarge} {
+			width: 178px;
+			height: 147px;
+			background-size: 178px 147px;
+		}
 	}
 	.info {
 		color: #8cc63f;
@@ -44,12 +54,18 @@ header {
 			color: white;
 			font-size: 24px;
 			font-weight: 700;
+			@media #{$bp-blarge} {
+				font-size: 22px;
+			}
 		}
 		.link {
 			color: #8cc63f;
 			font-size: 18px;
 			text-decoration: underline;
 			display: inline-block;
+			@media #{$bp-blarge} {
+				font-size: 16px;
+			}
 		}
 	}
 
@@ -58,16 +74,28 @@ header {
 		font-family: $noto;
 		font-size: 75px;
 		line-height: 80px;
+		@media #{$bp-blarge} {
+			font-size: 57px;
+			line-height: 60px;
+		}
 	}
 	h5 {
 		margin: 33px 0 10px 0;
 		font-size: 34px;
 		line-height: 37px;
+		@media #{$bp-blarge} {
+			font-size: 24px;
+			line-height: 29px;
+		}
 	}
 	h6 {
 		margin: 0;
 		font-size: 20px;
 		line-height: 25px;
+		@media #{$bp-blarge} {
+			font-size: 16px;
+			line-height: 25px;
+		}
 	}
 
 	.video-play {
@@ -86,6 +114,9 @@ header {
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
+			@media #{$bp-blarge} {
+				margin-left: 120px;
+			}
 		}
 	}
 
@@ -114,6 +145,9 @@ header {
 			color: #404042;
 			font-size: 36px;
 			line-height: 50px;
+			@media #{$bp-blarge} {
+				font-size: 30px;
+			}
 		}
 		h5 {
 			color: #404042;
@@ -121,16 +155,26 @@ header {
 			margin-top: 25px;
 			margin-bottom: 10px;
 			line-height: 25px;
+			@media #{$bp-blarge} {
+				font-size: 18px;
+			}
 		}
 		.main-list {
 			padding-left: 40px;
 			padding-bottom: 35px;
+			@media #{$bp-blarge} {
+				padding-left: 30px;
+			}
 			li {
 				color: #161616;
 				font-size: 14px;
 				line-height: 21px;
 				position: relative;
 				padding-left: 25px;
+				@media #{$bp-blarge} {
+					font-size: 13px;
+					line-height: 16px; 
+				}
 				&:before {
 					content: '';
 					display: block;
@@ -142,11 +186,19 @@ header {
 					height: 5px;
 					border-radius: 50%;
 					background-color: #161616;
+					@media #{$bp-blarge} {
+						width: 4px;
+						height: 4px;
+					}
 				}
 			}
 		}
 		.plan-img {
 			display: block;
+			@media #{$bp-blarge} {
+				max-width: 100%;
+				height: auto;
+			}
 		}
 		.line-top {
 			position: relative;
@@ -180,6 +232,9 @@ header {
 			position: relative;
 			padding-left: 48px;
 			display: inline-block;
+			@media #{$bp-blarge} {
+				padding-left: 35px;
+			}
 			.pdf {
 				display: inline-block;
 				position: absolute;
@@ -190,6 +245,11 @@ header {
 				width: 31px;
 				height: 31px;
 				background-size: 31px 31px;
+				@media #{$bp-blarge} {
+					width: 22px;
+					height: 22px;
+					background-size: 22px 22px;
+				}
 			}
 		}
 	}
@@ -234,6 +294,12 @@ header {
 				width: 33px;
 				height: 36px;
 				background-size: 33px 36px;
+				@media #{$bp-blarge} {
+					left: 30px;
+					width: 24px;
+					height: 26px;
+					background-size: 24px 26px;
+				}
 			}
 			i.icon-2 {
 				position: absolute;
@@ -246,6 +312,11 @@ header {
 				width: 37px;
 				height: 28px;
 				background-size: 37px 28px;
+				@media #{$bp-blarge} {
+					width: 27px;
+					height: 20px;
+					background-size: 27px 20px;
+				}
 			}
 			.top >div:first-child:after {
 				content: '';
@@ -262,6 +333,10 @@ header {
 				padding-left: 109px;
 				font-size: 16px;
 				color: rgba(255,255,255, .5);
+				@media #{$bp-blarge} {
+					font-size: 12px;
+					padding-left: 80px;
+				}
 			}
 			.xs {
 				font-size: 14px;
@@ -269,10 +344,17 @@ header {
 			}
 			.lg {
 				font-size: 56px;
+				@media #{$bp-blarge} {
+					font-size: 42px;
+					line-height: 50px;
+				}
 			}
 			.md {
 				font-size: 36px;
 				margin-top: 15px;
+				@media #{$bp-blarge} {
+					font-size: 30px;
+				}
 				span {
 					&:first-child {
 						margin-right: 10px;
@@ -290,18 +372,32 @@ header {
 		}
 		.padding-timer {
 			margin-left: 109px;
+			@media #{$bp-blarge} {
+				margin-left: 80px;
+			}
 		}
 		.bottom-line {
 			padding: 30px 0px 30px 38px;
+			@media #{$bp-blarge} {
+				padding-left: 25px;
+			}
 			.title-block {
 				font-size: 46px;
 				line-height: 44px;
 				margin-bottom: 15px;
+				@media #{$bp-blarge} {
+					font-size: 30px;
+					line-height: 33px;
+				}
 			}
 			.dsc {
 				font-size: 20px;
 				line-height: 24px;
 				margin-bottom: 15px;
+				@media #{$bp-blarge} {
+					font-size: 16px;
+					line-height: 18px;
+				}
 			}
 			form {
 				padding-right: 54px;
@@ -328,6 +424,9 @@ header {
 	font-size: 46px;
 	line-height: 50px;
 	text-align: center;
+	@media #{$bp-blarge} {
+		font-size: 38px;
+	}
 }
 .desc {
 	color: #404042;
@@ -335,6 +434,10 @@ header {
 	line-height: 25px;
 	text-align: center;
 	margin-top: 17px;
+	@media #{$bp-blarge} {
+		font-size: 22px;
+		line-height: 25px;
+	}
 }
 
 
@@ -346,6 +449,9 @@ header {
 	.button {
 		padding-left: 70px;
 		padding-right: 70px;
+		@media #{$bp-blarge} {
+			padding: 0 42px;
+		}
 	}
 	.adv {
 		padding-top: 95px;
@@ -357,11 +463,18 @@ header {
 		color: #404042;
 		font-size: 24px;
 		line-height: 24px;
+		@media #{$bp-blarge} {
+			font-size: 19px;
+			line-height: 22px;
+		}
 	}
 	.wrapp-icon-1 {
 		height: 69px;
 		position: relative;
 		margin-bottom: 60px;
+		@media #{$bp-blarge} {
+			height: 52px;
+		}
 		i {
 			display: inline-block;
 			position: absolute;
@@ -375,18 +488,33 @@ header {
 				width: 61px;
 				height: 57px;
 				background-size: 61px 57px;
+				@media #{$bp-blarge} {
+					width: 45px;
+					height: 42px;
+					background-size: 45px 42px;
+				}
 			}
 			&.icon-1-2 {
 				background: url('../svg/icon-1-2.svg') center top no-repeat;
 				width: 69px;
 				height: 69px;
 				background-size: 69px 69px;
+				@media #{$bp-blarge} {
+					width: 52px;
+					height: 52px;
+					background-size: 52px 52px;
+				}
 			}
 			&.icon-1-3 {
 				background: url('../svg/icon-1-3.svg') center top no-repeat;
 				width: 51px;
 				height: 57px;
 				background-size: 51px 57px;
+				@media #{$bp-blarge} {
+					width: 39px;
+					height: 42px;
+					background-size: 39px 42px;
+				}
 			}
 		}
 	}
@@ -421,6 +549,9 @@ header {
 			margin-top: 60px;
 			// backface-visibility: hidden;
 			// transform: translateZ(0) scale(1.0, 1.0);
+			@media #{$bp-blarge} {
+				max-height: 300px;
+			}
 		}
 	}
 	.dsc-block {
@@ -429,6 +560,9 @@ header {
 		float: right;
 		padding: 70px 55px 80px 55px;
 		margin-top: 25px;
+		@media #{$bp-blarge} {
+			padding-left: 40px;
+		}
 		.main-info {
 			display: none;
 			&.active {
@@ -440,6 +574,10 @@ header {
 			font-size: 36px;
 			line-height: 40px;
 			font-family: $noto;
+			@media #{$bp-blarge} {
+				font-size: 28px;
+				line-height: 32px;
+			}
 		}
 		.button {
 			width: 100%;
@@ -454,12 +592,19 @@ header {
 			padding-left: 45px;
 			display: inline-block;
 			margin-top: 30px;
+			@media #{$bp-blarge} {
+				padding-left: 34px;
+				font-size: 16px;
+			}
 			i {
 				position: absolute;
 				left: 0;
 				top: 50%;
 				transform: translateY(-50%);
 				font-size: 32px;
+				@media #{$bp-blarge} {
+					font-size: 25px;
+				}
 			}
 		}
 	}
@@ -467,6 +612,10 @@ header {
 		color: #404042;
 		font-size: 78px;
 		line-height: 80px;
+		@media #{$bp-blarge} {
+			font-size: 58px;
+			line-height: 60px;
+		}
 	}
 }
 
@@ -485,6 +634,10 @@ header {
 	.title-2 {
 		margin-bottom: 105px;
 		margin-top: 100px;
+		@media #{$bp-blarge} {
+			font-size: 38px;
+			line-height: 50px;
+		}
 	}
 	.photo {
 		display: block;
@@ -494,6 +647,10 @@ header {
 		left: 50%;
 		transform: translateX(-50%);
 		margin-top: 32px;
+		@media #{$bp-blarge} {
+		      max-width: 100%;
+		      height: auto;
+		}
 	}
 	.title-lg {
 		padding-left: 50px;
@@ -516,11 +673,17 @@ header {
 		font-size: 22px;
 		padding-left: 50px;
 		margin-bottom: 7px;
+		@media #{$bp-blarge} {
+		      font-size: 20px;
+		}
 	}
 	.price-md {
 		color: #404042;
 		font-size: 32px;
 		padding-left: 50px;
+		@media #{$bp-blarge} {
+		      font-size: 24px;
+		}
 	}
 	.box {
 		padding-top: 105px;
@@ -535,6 +698,10 @@ header {
 			top: 0;
 			transform: translateY(-50%);
 			margin-left: 50px;
+			@media #{$bp-blarge} {
+				width: 86px;
+				height: 86px;
+			}
 			i.pattern {
 				display: inline-block;
 				position: absolute;
@@ -547,6 +714,11 @@ header {
 				width: 46px;
 				height: 44px;
 				background-size: 46px 44px;
+				@media #{$bp-blarge} {
+					width: 34px;
+					height: 32px;
+					background-size: 34px 32px;
+				}
 			}
 			&.circle-1 {
 				background-color: #047bc0;
@@ -565,6 +737,10 @@ header {
 .title-slide {
 	font-size: 65px;
 	line-height: 64px;
+	@media #{$bp-blarge} {
+	      font-size: 52px;
+line-height: 56px;
+	}
 }
 .note-slide {
 	color: #fafafa;
@@ -647,6 +823,9 @@ header {
 		text-align: center;
 		margin-top: 80px;
 		line-height: 21px;
+		@media #{$bp-blarge} {
+		      margin-top: 50px;
+		}
 	} 
 	.car {
 		max-width: 100%;
@@ -683,6 +862,9 @@ header {
 		.wrapp-icon-2 {
 			height: 64px;
 			position: relative;
+			@media #{$bp-blarge} {
+			      height: 47px;
+			}
 			i {
 				position: absolute;
 				display: block;
@@ -696,18 +878,33 @@ header {
 					width: 60px;
 					height: 64px;
 					background-size: 60px 64px;
+					@media #{$bp-blarge} {
+					      width: 43px;
+					      height: 47px;
+					      background-size: 43px 47px;
+					}
 				}
 				&.icon-2-2 {
 					background: url('../svg/icon-2-2.svg') center top no-repeat;
 					width: 69px;
 					height: 44px;
 					background-size: 69px 44px;
+					@media #{$bp-blarge} {
+					      width: 52px;
+					      height: 33px;
+					      background-size: 52px 33px;
+					}
 				}
 				&.icon-2-3 {
 					background: url('../svg/icon-2-3.svg') center top no-repeat;
 					width: 61px;
 					height: 57px;
 					background-size: 61px 57px;
+					@media #{$bp-blarge} {
+					      width: 45px;
+					      height: 42px;
+					      background-size: 45px 42px;
+					}
 				}
 			}
 		}
@@ -716,12 +913,17 @@ header {
 			font-size: 27px;
 			font-weight: 700;
 			margin-top: 47px;
+
 		}
 		p {
 			color: #848484;
 			font-size: 22px;
 			line-height: 26px;
 			margin-top: 10px;
+			@media #{$bp-blarge} {
+			      font-size: 18px;
+line-height: 22px;
+			}
 		}
 	}
 }
@@ -759,10 +961,18 @@ header {
 			height: 84px;
 			background-size: 184px 84px;
 			margin-bottom: 20px;
+			@media #{$bp-blarge} {
+			      width: 138px;
+			      height: 64px;
+			      background-size: 138px 64px;
+			}
 		}
 		.data {
 			color: #9b9b9b;
 			font-size: 24px;
+			@media #{$bp-blarge} {
+			      font-size: 18px;
+			}
 		}
 		.time {
 			color: #404042;
@@ -771,6 +981,9 @@ header {
 			padding-bottom: 20px;
 			margin-bottom: 20px;
 			border-bottom: 1px solid #ebebeb;
+			@media #{$bp-blarge} {
+			      font-size: 29px;
+			}
 		}
 		.place {
 			color: #404042;
@@ -802,12 +1015,21 @@ header {
 		left: 90px;
 		top: -80px;
 		z-index: 5;
+		@media #{$bp-blarge} {
+		      width: 212px;
+		      height: 174px;
+		      background-size: 212px 174px;
+		}
 	} 
 	.main-image {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 115px;
+		@media #{$bp-blarge} {
+		      width: 799px;
+		      height: auto;
+		}
 	}
 	.wrapp {
 		position: relative;
@@ -818,12 +1040,19 @@ header {
 				color: #8dc73f;
 				font-size: 20px;
 				font-weight: 700;
+				@media #{$bp-blarge} {
+				      font-size: 16px;
+				}
 			}
 			span {
 				color: #161616;
 				font-size: 14px;
 				line-height: 21px;
 				display: block;
+				@media #{$bp-blarge} {
+				      font-size: 13px;
+line-height: 14px;
+				}
 			}
 			&.pos-1 {
 				top: -20px;
@@ -858,6 +1087,10 @@ header {
 	.blue-section-title {
 		font-size: 50px;
 		line-height: 53px;
+		@media #{$bp-blarge} {
+		      font-size: 40px;
+line-height: 43px;
+		}
 	}
 	.right-float {
 		float: right;
@@ -871,6 +1104,9 @@ header {
 			text-decoration: underline;
 			color: white;
 			margin-top: 20px;
+			@media #{$bp-blarge} {
+			      font-size: 16px;
+			}
 		}
 	}
 }
@@ -921,6 +1157,9 @@ header {
 			margin-bottom: 0px;
 			font-size: 30px;
 			margin-left: 60px;
+			@media #{$bp-blarge} {
+			      margin-left: 45px;
+			}
 		}
 		.tabs-caption {
 			padding: 20px 0 60px;
@@ -933,6 +1172,12 @@ header {
 				font-size: 26px;
 				line-height: 30px;
 				padding: 17px	10px 17px 60px;
+				@media #{$bp-blarge} {
+				      padding-left: 45px;
+				      font-size: 22px;
+				      padding-top: 9px;
+				      padding-bottom: 9px;
+				}
 				// height: 56px;
 				// line-height: 56px;
 				&:hover {
@@ -968,6 +1213,10 @@ header {
 			line-height: 60px;
 			padding-bottom: 50px;
 			border-bottom: 1px solid rgba(204,204,204, .4);
+			@media #{$bp-blarge} {
+			      font-size: 36px;
+line-height: 46px;
+			}
 		}
 
 		.tabs-content {
@@ -987,6 +1236,12 @@ header {
 			.list-1 {
 				margin-bottom: 30px;
 				margin-top: 0;
+				li {
+					@media #{$bp-blarge} {
+					      font-size: 14px;
+line-height: 16px;
+					}
+				}
 			}
 		}
 		.tabs-content-title {
@@ -994,17 +1249,28 @@ header {
 			font-size: 56px;
 			line-height: 60px;
 			margin-top: 50px;
+			@media #{$bp-blarge} {
+			      font-size: 42px;
+			      line-height: 50px;
+			}
 		}
 		p {
 			color: #404042;
 			font-size: 18px;
 			line-height: 22px;
 			margin-top: 30px;
+			@media #{$bp-blarge} {
+			      font-size: 14px;
+line-height: 16px;
+			}
 		}
 		.button {
 			padding: 0 45px;
 			margin-top: 10px;
 			text-decoration: none;
+			@media #{$bp-blarge} {
+			      padding: 0 30px;
+			}
 		}
 	}
 }
@@ -1019,6 +1285,12 @@ header {
 
 
 .section-12	{
+	.title {
+		@media #{$bp-blarge} {
+		      font-size: 36px;
+line-height: 38px;
+		}
+	}
 	.container {
 		padding-top: 95px;
 		position: relative;
@@ -1027,6 +1299,10 @@ header {
 			position: absolute;
 			right: 0;
 			top: -90px;
+			@media #{$bp-blarge} {
+			      width: 600px;
+			      height: auto;
+			}
 		}
 	}
 	.title {
@@ -1040,6 +1316,9 @@ header {
 		position: relative;
 		padding-left: 150px;
 		margin-bottom: 65px;
+		@media #{$bp-blarge} {
+		      padding-left: 115px;
+		}
 		&.l-wr {
 			margin-bottom: 105px;
 		}
@@ -1047,6 +1326,10 @@ header {
 			color: #161616;
 			font-size: 18px;
 			line-height: 24px;
+			@media #{$bp-blarge} {
+			      font-size: 14px;
+line-height: 17px;
+			}
 		}
 		.circle-green {
 			width: 92px;
@@ -1059,6 +1342,10 @@ header {
 			left: 0;
 			top: 50%;
 			transform: translateY(-50%);
+			@media #{$bp-blarge} {
+			      width: 69px;
+			      height: 69px;
+			}
 			i {
 				position: absolute;
 				margin: auto;
@@ -1072,12 +1359,22 @@ header {
 					width: 40px;
 					height: 31px;
 					background-size: 40px 31px;
+					@media #{$bp-blarge} {
+					      width: 30px;
+					      height: 23px;
+					      background-size: 30px 23px;
+					}
 				}
 				&.patt-2 {
 					background: url('../svg/patt-2.svg') center top no-repeat;
 					width: 41px;
 					height: 34px;
 					background-size: 41px 34px;
+					@media #{$bp-blarge} {
+					      width: 31px;
+					      height: 26px;
+					      background-size: 31px 26px;
+					}
 				}
 			}
 		}
@@ -1097,6 +1394,10 @@ header {
 		line-height: 56px;
 		color: #161616;
 		margin-bottom: 35px;
+		@media #{$bp-blarge} {
+		      font-size: 36px;
+line-height: 46px;
+		}
 	}
 	#video-placeholder {
 		max-width: 100% !important;
@@ -1123,6 +1424,9 @@ header {
 		max-width: 73%;
 		img {
 			max-width: 100%;
+			@media #{$bp-blarge} {
+			      max-height: 173px;
+			}
 		}
 	}
 }
@@ -1159,6 +1463,9 @@ header {
 		margin-top: 10px;
 		padding: 70px 30px 90px 30px;
 		margin-bottom: 30px;
+		@media #{$bp-blarge} {
+		      width: 424px;
+		}
 		.button {
 			width: 100%;
 			margin-top: 40px;
@@ -1169,18 +1476,30 @@ header {
 			width: 147px;
 			height: 68px;
 			background-size: 147px 68px;
+			@media #{$bp-blarge} {
+			      width: 110px;
+			      height: 51px;
+			      background-size: 110px 51px;
+			}
 		}
 		.name-serv {
 			color: #161616;
 			font-size: 34px;
 			margin-top: 35px;
 			margin-bottom: 12px;
+			@media #{$bp-blarge} {
+			      font-size: 28px;
+line-height: 24px;
+			}
 		}
 		.place {
 			color: #161616;
 			font-size: 20px;
 			line-height: 24px;
 			margin-bottom: 15px;
+			@media #{$bp-blarge} {
+			      font-size: 16px;
+			}
 		}
 		.phone-footer {
 			color: #404042;
@@ -1188,12 +1507,18 @@ header {
 			line-height: 60px;
 			font-family: $noto;
 			margin-bottom: 10px;
+			@media #{$bp-blarge} {
+			      font-size: 28px;
+			}
 		}
 		.link-foot {
 			color: #047bc0;
 			font-family: $noto;
 			font-size: 22px;
 			text-decoration: underline;
+			@media #{$bp-blarge} {
+			      font-size: 16px;
+			}
 		}
 	}
 }
@@ -1204,6 +1529,9 @@ header {
 	padding: 0 30px 45px 30px;
 	text-align: center;
 	width: 563px;
+	@media #{$bp-blarge} {
+	      width: 424px;
+	}
 	&.hide-b {
 		padding-top: 55px;
 		padding-bottom: 66px;
@@ -1248,16 +1576,26 @@ header {
 		padding-bottom: 40px;
 		margin-bottom: 17px;
 		border-bottom: 1px solid #2694d5;
+		@media #{$bp-blarge} {
+		      font-size: 35px;
+		}
 	}
 	.form-head {
 		color: white;
 		font-size: 34px;
+		@media #{$bp-blarge} {
+		      font-size: 26px;
+		}
 	}
 	.form-head-sm {
 		color: white;
 		font-size: 18px;
 		line-height: 24px;
 		margin-top: 10px;
+		@media #{$bp-blarge} {
+		      font-size: 14px;
+line-height: 16px;
+		}
 	}
 }
 
@@ -1271,6 +1609,10 @@ footer {
 		color: #404042;
 		font-size: 14px;
 		line-height: 21px;
+		@media #{$bp-blarge} {
+		      font-size: 12px;
+		      line-height: 16px;
+		}
 	}
 	.link-foot-l {
 		display: inline-block;
@@ -1278,12 +1620,18 @@ footer {
 		font-size: 14px;
 		line-height: 13px;
 		text-decoration: underline;
+		@media #{$bp-blarge} {
+		      font-size: 12px;
+		}
 	}
 	.link-m {
 		color: #047bc0;
 		font-size: 14px;
 		text-decoration: underline;
 		line-height: 13px;
+		@media #{$bp-blarge} {
+		      font-size: 12px;
+		}
 	}
 	.info-foot {
 		color: #9b9b9b;

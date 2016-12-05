@@ -10,6 +10,11 @@
   color: white;
   font-size: 20px;
   transition: .15s;
+  @media #{$bp-blarge} {
+        height: 45px;
+        line-height: 45px;
+        font-size: 16px;
+  }
   &.padding-slide {
     padding: 0 43px;
   }

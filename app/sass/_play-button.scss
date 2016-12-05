@@ -7,9 +7,12 @@
   background: url(../svg/play.svg) center center no-repeat rgba(255,255,255, 1) !important;
   background-size: 21px 28px;
   transition: all .15s linear;
+  @media #{$bp-blarge} {
+    width: 70px;
+    height: 70px;
+  }
   &:hover {
     cursor: pointer !important;
-    // border-color: transparent;
     background: url(../svg/play.svg) center no-repeat !important;
     background-size: 21px 28px;
   }
@@ -26,6 +29,11 @@
     border: 1px solid rgba(255,255,255,.32);
     border-radius: 50%;
     animation: circle 1.7s linear infinite;
+    @media #{$bp-blarge} {
+      width: 108px;
+      height: 108px;
+      left: -19px;
+    }
   }
   &:after {
     content: " ";
@@ -40,5 +48,10 @@
     border: 1px solid rgba(255,255,255,.32);
     border-radius: 50%;
     animation: circle 2s linear .5s infinite;
-  }
+    @media #{$bp-blarge} {
+     width: 132px;
+     height: 132px;
+     left: -31px; 
+   }
+ }
 }

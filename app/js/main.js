@@ -30,6 +30,18 @@
       // }
 
 
+if (window.innerWidth <= 1623) {
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('video-placeholder', {
+          height: '415',
+          width: '680',
+          videoId: 'nIv2elxcvvQ',
+          events: {
+            // 'onReady': onPlayerReady
+          }
+        });
+      }
+}
 
 
 $(document).ready(function(){
