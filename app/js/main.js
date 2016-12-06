@@ -30,7 +30,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
       // }
       var wall = window.innerWidth;
 
-      if (wall >= 1241 & wall < 1624 ) {
+      if (wall > 1241 & wall < 1624 ) {
         console.log(wall);
 
         function onYouTubeIframeAPIReady() {
