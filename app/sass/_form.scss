@@ -16,6 +16,13 @@
 					      height: 48px;
 					      font-size: 16px;
 					}
+					@media #{$bp-large} {
+					      height: 37px;
+					      padding-left: 15px;
+					}
+					@media #{$bp-medium} {
+					      height: 30px;
+					}
 				}
 				textarea {
 					border: none;
@@ -35,6 +42,12 @@
 					padding-top: 20px;
 					@media #{$bp-blarge} {
 					      height: 94px;
+					}
+					@media #{$bp-large} {
+					      height: 75px;
+					}
+					@media #{$bp-medium} {
+					      height: 56px;
 					}
 				}
 				[type=submit] {

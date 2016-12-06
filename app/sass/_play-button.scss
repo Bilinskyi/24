@@ -11,6 +11,15 @@
     width: 70px;
     height: 70px;
   }
+  @media #{$bp-large} {
+    width: 56px;
+    height: 56px;
+    background-size: 30% !important;
+  }
+  @media #{$bp-medium} {
+        width: 42px;
+height: 42px;
+  }
   &:hover {
     cursor: pointer !important;
     background: url(../svg/play.svg) center no-repeat !important;
@@ -34,6 +43,16 @@
       height: 108px;
       left: -19px;
     }
+    @media #{$bp-large} {
+      width: 86px;
+      height: 86px;
+      left: -15px;
+    }
+    @media #{$bp-medium} {
+          width: 64px;
+          height: 64px;
+          left: -11px;
+    }
   }
   &:after {
     content: " ";
@@ -52,6 +71,16 @@
      width: 132px;
      height: 132px;
      left: -31px; 
+   }
+   @media #{$bp-large} {
+     width: 106px;
+     height: 106px;
+     left: -25px;
+   }
+   @media #{$bp-medium} {
+         width: 80px;
+         height: 80px;
+         left: -19px;
    }
  }
 }

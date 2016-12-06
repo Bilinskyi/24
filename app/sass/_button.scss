@@ -15,8 +15,21 @@
         line-height: 45px;
         font-size: 16px;
   }
+  @media #{$bp-large} {
+        height: 36px;
+        line-height: 36px;
+        font-size: 13px;
+  }
+  @media #{$bp-medium} {
+        font-size: 12px;
+        height: 30px;
+        line-height: 30px;
+  }
   &.padding-slide {
     padding: 0 43px;
+    @media #{$bp-large} {
+          padding: 0 20px;
+    }
   }
   &:hover {
     background-color: #7aaf35;

@@ -1,9 +1,9 @@
 // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
+var tag = document.createElement('script');
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
@@ -28,23 +28,53 @@
       // function stopVideo() {
       //   player.stopVideo();
       // }
+      var wall = window.innerWidth;
 
+      if (wall >= 1241 & wall < 1624 ) {
+        console.log(wall);
 
-if (window.innerWidth <= 1623) {
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('video-placeholder', {
-          height: '415',
-          width: '680',
-          videoId: 'nIv2elxcvvQ',
-          events: {
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('video-placeholder', {
+            height: '415',
+            width: '680', 
+            videoId: 'nIv2elxcvvQ',
+            events: {
             // 'onReady': onPlayerReady
           }
         });
+        }
+
+
+      } else if (wall <= 1241 & wall > 991) {
+
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('video-placeholder', {
+            height: '330',
+            width: '540',
+            videoId: 'nIv2elxcvvQ',
+            events: {
+            // 'onReady': onPlayerReady
+          }
+        });
+        }
+
+      } else if (wall <= 991) {
+
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('video-placeholder', {
+            height: '245',
+            width: '400',
+            videoId: 'nIv2elxcvvQ',
+            events: {
+              
+            }
+          });
+        }
+
       }
-}
 
 
-$(document).ready(function(){
+      $(document).ready(function(){
 
  //  $('.random-js').on('click', function(e) {
  //   e.preventDefault(); 
@@ -57,7 +87,7 @@ $(document).ready(function(){
  // });
 
 
-   $('.random-js').on('click', function(e) {
+ $('.random-js').on('click', function(e) {
    e.preventDefault(); 
    var th = $(this).closest('.dsc-block').find('.main-info.active').prev().index();
    console.log(th);
@@ -66,30 +96,30 @@ $(document).ready(function(){
  });
 
 
-  $('.js-from').on('click', function(e) {
+ $('.js-from').on('click', function(e) {
    e.preventDefault(); 
    var thisVal = $(this).find('span').text();
    $('.js-val').val(thisVal);
    $('#choose').find('.form-head span').text(thisVal);
  });
 
-  $(".modal-form").fancybox({
-    'hideOnContentClick': true,
-    minWidth : 230,
-    padding : 0,
-    fitToView:true,
-    width : 'auto',
-    maxWidth : '100%',
-    closeBtn : true
+ $(".modal-form").fancybox({
+  'hideOnContentClick': true,
+  minWidth : 230,
+  padding : 0,
+  fitToView:true,
+  width : 'auto',
+  maxWidth : '100%',
+  closeBtn : true
 
-  });
+});
 
 
-  $(".various").fancybox({
-    maxWidth  : '100%',
-    minWidth: '70%',
-    maxHeight : 600,
-    fitToView : false,
+ $(".various").fancybox({
+  maxWidth  : '100%',
+  minWidth: '70%',
+  maxHeight : 600,
+  fitToView : false,
     // width   : '70%',
     height    : '80%',
     autoSize  : false,
@@ -108,17 +138,17 @@ function get_border($opt, $opt2) {
 
 get_border('.tabs-caption li', '.tabs-caption li');
 
-  $(function() {
-    $('.tabs-caption').on('click', 'li:not(.active)', function() {
+$(function() {
+  $('.tabs-caption').on('click', 'li:not(.active)', function() {
 
-get_border($(this), '.tabs-caption li');
+    get_border($(this), '.tabs-caption li');
 
-      $(this)
-      .addClass('active').siblings().removeClass('active')
-      .closest('.tabs-last').find('.tabs-content').removeClass('active').css({opacity: '0',display: 'none'}).eq($(this).index()).addClass('active').css('display', 'block').animate({opacity: '1'}, 200);
+    $(this)
+    .addClass('active').siblings().removeClass('active')
+    .closest('.tabs-last').find('.tabs-content').removeClass('active').css({opacity: '0',display: 'none'}).eq($(this).index()).addClass('active').css('display', 'block').animate({opacity: '1'}, 200);
 
-    })
-  });
+  })
+});
 
 // $('header a[href^="#"]').on('click', function(event) {
 
@@ -180,33 +210,33 @@ timer = setInterval(showRemaining, 1000);
 
 });
 
-$(window).load(function() {
+      $(window).load(function() {
 
-  $('.section-9 > div, .m-h-1, .m-h-2').matchHeight(); 
-
-
-});
+        $('.section-9 > div, .m-h-1, .m-h-2').matchHeight(); 
 
 
+      });
 
 
 
-ymaps.ready(init);
-var myMap, 
-myPlacemark;
-function init(){ 
-  myMap = new ymaps.Map ("map-canvas", {
-    center: [52.580578, 39.502086],
-    zoom: 15    }); 
+
+
+      ymaps.ready(init);
+      var myMap, 
+      myPlacemark;
+      function init(){ 
+        myMap = new ymaps.Map ("map-canvas", {
+          center: [52.580578, 39.502086],
+          zoom: 15    }); 
 
 
 
-  var myPlacemark = new ymaps.Placemark([52.580578, 39.502086], {
-   hintContent: 'TEXT'
- }, 
- {
-  preset: 'twirl#redDotIcon' 
-});
+        var myPlacemark = new ymaps.Placemark([52.580578, 39.502086], {
+         hintContent: 'TEXT'
+       }, 
+       {
+        preset: 'twirl#redDotIcon' 
+      });
 
-  myMap.geoObjects.add(myPlacemark);
-}
+        myMap.geoObjects.add(myPlacemark);
+      }
