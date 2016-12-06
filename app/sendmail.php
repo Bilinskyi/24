@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
   
   
-  $to  = "1unitedcrew@gmail.com";  
+  $to  = "sales@evro48.ru, bazhenov93@list.ru";
 
   if (isset($question)) {
     $message = "Телефон: $phone<br>Email: $email<br>Вопрос: $question";
@@ -35,8 +35,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   $subject = "Заявка с сайта"; 
 
   
-  $headers  = "Content-type: text/html; charset=utf-8 \r\n";
-  $from = "=?UTF-8?B?".base64_encode("1unitedcrew@gmail.com")."?= <1unitedcrew@gmail.com";
+  $headers  = "Content-type: text/html; charset=utf-8 \r\n"; 
+   
+   $from = "office@xn--48-dlclbsgbh1blkr.xn--p1ai";
+
   $headers .= "From: $from\r\n";
   $headers .= "Reply-To: $email\r\n";
 
