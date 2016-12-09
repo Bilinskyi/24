@@ -11,6 +11,7 @@ imageop = require('gulp-image-optimization'),
 del         = require('del'), 
 autoprefixer = require('gulp-autoprefixer'),
 spritesmith  = require('gulp.spritesmith'),
+tiny = require('gulp-tinypng-nokey'),
 cleanCSS = require('gulp-clean-css');
 
 
@@ -24,6 +25,13 @@ gulp.task('browserSync', function() {
 })
 
 
+// more compressed
+gulp.task('tiny', function(cb) {
+    gulp.src('app/imgNOT/*')
+        .pipe(tiny())
+        .pipe(gulp.dest('image'));
+});
+
 
 
 
@@ -36,7 +44,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('images', function(cb) {
 	gulp.src(['app/img/**/*.png','app/img/**/*.jpg','app/img/**/*.gif','app/img/**/*.jpeg']).pipe(imageop({
-		optimizationLevel: 5,
+		optimizationLevel: 10,
 		progressive: true,
 		interlaced: true
 	})).pipe(gulp.dest('img_optimized')).on('end', cb).on('error', cb);
@@ -141,7 +149,6 @@ gulp.task('sprite', function() {
 
 gulp.task('watch', ['sass', 'browserSync'], function () {
 	gulp.watch('app/sass/**/*.scss', ['sass']);
-// Reloads the browser whenever HTML or JS files change
 gulp.watch('app/*.html', browserSync.reload); 
 gulp.watch('app/*.css', browserSync.reload); 
 gulp.watch('app/*.php', browserSync.reload); 
