@@ -75,7 +75,7 @@ $(document).ready(function() {
 						.val('')
 						.removeAttr('checked')
 						.removeAttr('selected');
-						window.location.href = "thx.html";
+						window.location.href = "thx1.html";
 							// $.fancybox.close()
 							// var message = $('.modal');
 							// $.fancybox(message);
@@ -103,7 +103,7 @@ $(document).ready(function() {
 						.val('')
 						.removeAttr('checked')
 						.removeAttr('selected');
-						window.location.href = "thx.html";
+						window.location.href = "thx1.html";
 							// $.fancybox.close()
 							// var message = $('.modal');
 							// $.fancybox(message);

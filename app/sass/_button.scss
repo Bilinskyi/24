@@ -10,6 +10,9 @@
   color: white;
   font-size: 20px;
   transition: .15s;
+  &.thx-btn {
+    padding: 0 15px;
+  }
   @media #{$bp-blarge} {
         height: 45px;
         line-height: 45px;
